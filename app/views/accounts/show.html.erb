@@ -1,0 +1,17 @@
+<p>
+  <strong>User:</strong>
+  <%= @account.user.name %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @account.amount %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @account.currency %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

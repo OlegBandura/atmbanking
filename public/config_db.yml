@@ -1,0 +1,38 @@
+users:
+  3321:
+    name: 'Volodymyr'
+    login: 'vova1'
+    password: 'mypass'
+  5922:
+    name: 'Iryna'
+    login: 'irussia1'
+    password: 'ho#ll_§1'
+  6128:
+    name: 'Bohdan'
+    login: 'bodia1'
+    password: 'p1v0rakru1eZZ!'
+accounts:
+  123:
+    currency: :uah
+    balance: 15578
+    user_id: 3321
+  124:
+    currency: :usd
+    balance: 143
+    user_id: 3321
+  136:
+    currency: :uah
+    balance: 2567
+    user_id: 5922
+  137:
+    currency: :usd
+    balance: 6531
+    user_id: 5922
+  156:
+    currency: :uah
+    balance: 100
+    user_id: 6128
+  157:
+    currency: :usd
+    balance: 0
+    user_id: 6128

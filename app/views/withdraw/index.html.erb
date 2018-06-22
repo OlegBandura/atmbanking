@@ -1,0 +1,15 @@
+<h1>Withdraw service</h1>
+<h2>Hello, <%= @user.name %></h2>
+<h2>Your balance:</br>
+  <% @account_cash.each do |a| %>
+    <%= a.amount %>
+    <%= a.currency %></br>
+     <% end %>
+</h2>
+
+<%= simple_form_for :withdraw, url: user_withdraw_index_path do |f| %>
+  <%= f.input :withdraw_sum %>
+    currency <%= f.select :currency, :uah => "uah", :usd => "usd" %></br>
+  <%= f.submit "Withdraw money" %>
+<% end %>
+<%= link_to 'Back', user_path(current_user.id) %>

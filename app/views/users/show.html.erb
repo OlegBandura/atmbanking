@@ -1,0 +1,22 @@
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+
+<%= link_to 'Edit', edit_user_registration_path(@user) %> |
+<%= link_to 'Back', users_path %>|
+<%= link_to 'Add account', new_account_path %>
+
+<h2><strong>Сash accounts:</strong></br></h2>
+  <b>money, currency</b>
+<p>
+  <% @account_cash.each do |a| %>
+    <%= a.amount %>
+    <%= a.currency %></br>
+     <% end %>
+<p>
+  <h1>Services:</h1>
+  <ul>
+    <li> <%= link_to 'Withdraw', user_withdraw_index_path(current_user.id) %>
+    <li> <%= link_to 'Transaction', user_transaction_index_path(current_user.id) %>
+    <li> <%= link_to 'Deposit', user_deposit_index_path(current_user.id) %>
+  </ul>

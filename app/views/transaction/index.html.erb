@@ -1,0 +1,18 @@
+<h1> Transaction service</h1>
+    <h2>Hello, <%= @user.name %></h2>
+  <h2>Your balance:</br>
+
+    <% @account_cash.each do |a| %>
+      <%= a.amount %>
+      <%= a.currency %></br>
+       <% end %>
+  </h2>
+
+<%= simple_form_for :transaction, url: user_transaction_index_path do |f| %>
+  <%= f.input :transaction_sum %>
+  currency <%= f.select :currency, :uah => "uah", :usd => "usd" %></br>
+  Transaction username
+  <%= f.select :transaction_user_id, User.all.map { |r| [r.name, r.id] } %></br>
+  <%= f.submit "Transaction money" %>
+<% end %>
+<%= link_to 'Back', user_path(current_user.id) %>

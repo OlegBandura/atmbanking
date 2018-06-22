@@ -1,0 +1,15 @@
+<h1>Deposit service</h1>
+<h2>Hello, <%= @user.name %></h2>
+<h2>Your balance:</br>
+  <% @account_cash.each do |a| %>
+    <%= a.amount %>
+    <%= a.currency %></br>
+     <% end %>
+</h2>
+
+<%= simple_form_for :deposit, url: user_deposit_index_path do |f| %>
+  <%= f.input :deposit_sum %>
+    currency <%= f.select :currency, :uah => "uah", :usd => "usd" %></br>
+  <%= f.submit "Deposit money" %>
+<% end %>
+<%= link_to 'Back', user_path(current_user.id) %>
